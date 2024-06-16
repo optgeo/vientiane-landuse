@@ -3,3 +3,5 @@ DST_PATH = vientiane-landuse.pmtiles
 LAYER = landuse
 
 all: 
+	SHAPE_RESTORE_SHX=YES ogr2ogr -of GeoJSONSeq /vsistdout/ "${SRC_URL}"
+	
